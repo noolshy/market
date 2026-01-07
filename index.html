@@ -643,7 +643,7 @@
     </div>
 
     <div class="telegram-info">
-        <strong>⚡ Мгновенная покупка через Telegram</strong>
+        <strong> Мгновенная покупка через Telegram</strong>
         <p>Нажмите на любой товар, чтобы увидеть детали и оформить заказ напрямую в Telegram</p>
     </div>
 
@@ -761,11 +761,11 @@
         function buyProduct() {
             if (currentModalProduct) {
                 const product = currentModalProduct;
-                const orderMessage = `🚀 ЗАКАЗ С NOOLSHY MARKET\n\n` +
+                const orderMessage = ` ЗАКАЗ С NOOLSHY MARKET\n\n` +
                                    `▫️ Товар: ${product.name} #${product.id}\n` +
                                    `▫️ Коллекция: ${product.category}\n` +
                                    `▫️ Стоимость: $0 USD\n\n` +
-                                   `💬 Для оформления заказа отправьте это сообщение администратору.`;
+                                   ` Для оформления заказа отправьте это сообщение администратору.`;
                 
                 const order = {
                     date: new Date().toISOString(),
@@ -783,10 +783,10 @@
                 localStorage.setItem('noolshyOrders', JSON.stringify(orders));
                 
                 window.open(TELEGRAM_CHANNEL, '_blank');
-                showNotification('🔄 Открываю Telegram...');
+                showNotification('Открываю Telegram...');
                 
                 setTimeout(() => {
-                    alert('📋 СООБЩЕНИЕ ДЛЯ TELEGRAM:\n\n' + 
+                    alert(' СООБЩЕНИЕ ДЛЯ TELEGRAM:\n\n' + 
                           orderMessage + 
                           '\n\nСсылка на канал: ' + TELEGRAM_CHANNEL);
                 }, 1000);
@@ -820,8 +820,8 @@
 
         showProducts(1);
         
-        console.log('🔥 NoolShy Market загружен');
-        console.log('📦 Всего товаров:', products.length);
+        console.log(' NoolShy Market загружен');
+        console.log(' Всего товаров:', products.length);
     </script>
 </body>
 </html>
